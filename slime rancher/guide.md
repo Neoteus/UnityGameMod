@@ -15,4 +15,23 @@ After modifying:
 
 Find the method `Update` at:
 
+    {} -/DroneStationBattery/Update
+
 After modifying:
+
+```C#
+public void Update()
+{
+	this.percentage = 1f;
+	bool? flag = this.previousHasAny;
+	bool flag2 = this.HasAny();
+	if (!(flag.GetValueOrDefault() == flag2 & flag != null))
+	{
+		this.previousHasAny = new bool?(this.HasAny());
+		if (this.onHasAnyChanged != null)
+		{
+			this.onHasAnyChanged();
+		}
+	}
+}
+```
