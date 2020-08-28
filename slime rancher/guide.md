@@ -7,9 +7,18 @@
 
 ## Unlimited Energy
 
-Find the method `EnergySpend` at:
+Find the method `SpendEnergy` at:
+
+    MonomiPark.SlimeRancher.DataModel/PlayerModel/SpendEnergy
 
 After modifying:
+
+```C#
+public void SpendEnergy(float energy)
+{
+	this.energyRecoverAfter = this.worldModel.worldTime + 10.0;
+}
+```
 
 ## Unlimited Drone Station Battery
 
