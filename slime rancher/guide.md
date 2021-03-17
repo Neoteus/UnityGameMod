@@ -1,17 +1,15 @@
-# Guide
-
-## Contents
+# Slime Rancher
 
 1. [Unlimited Energy](#unlimited-energy)
 2. [Unlimited Drone Station Battery](#unlimited-drone-station-battery)
 
 ## Unlimited Energy
 
-Find the method `SpendEnergy` at:
+Path:
 
     MonomiPark.SlimeRancher.DataModel/PlayerModel/SpendEnergy
 
-After modifying:
+Code:
 
 ```C#
 public void SpendEnergy(float energy)
@@ -22,11 +20,11 @@ public void SpendEnergy(float energy)
 
 ## Unlimited Drone Station Battery
 
-Find the method `Update` at:
+Path:
 
     {} -/DroneStationBattery/Update
 
-After modifying:
+Code:
 
 ```C#
 public void Update()
